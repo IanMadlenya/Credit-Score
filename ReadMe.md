@@ -11,3 +11,6 @@ and finally selecting the trained-model to test the load-applicant data.
 ![Create-Model](https://github.com/lohithn4/Credit-Score/blob/master/create_model.gif?raw=true)
 
 ![view_results](https://github.com/lohithn4/Credit-Score/blob/master/view_credit_score.gif?raw=true)
+
+Final_output:
+![final output](https://github.com/lohithn4/Credit-Score/blob/master/final_output.png?raw=true)
