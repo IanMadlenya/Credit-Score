@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}User Registration{% endblock %}
+
+{% block page_content %}
+    <h1>Register</h1>
+    <div class="row">
+        <div class="col-md-3">
+            {{ wtf.quick_form(form) }}
+        </div>
+           {% if  exists %}
+            <div class="row-md-3">  
+            <p>!User Exists</p>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}

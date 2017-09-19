@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Create New Model{% endblock %}
+
+
+{% block page_content %}  
+
+
+
+   {% if form %}
+   <div class="container">
+   <form action="/createmodel" method=post>
+    <table>
+    <h4>Create New Model</h4>
+    <tr>
+    <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                {{ wtf.quick_form(form)}}
+                </div> 
+            </div>
+        </div>
+    </table>
+   </form>
+   </div>
+   {% endif %}
+
+
+   {% if accuracy %}
+            {% block script %}
+                {{ css_resources|indent(4)|safe }}
+                {{ js_resources|indent(4)|safe }}
+                {{ plot_script|indent(4)|safe }}
+              {% endblock %}
+   <div class="container">
+   <p>Accuracy:{{ accuracy }} </p>
+   </div>
+   
+   <div class="container">
+      {{ plot_div|indent(4)|safe }}
+  </div>
+  {% endif %}
+{% endblock %}

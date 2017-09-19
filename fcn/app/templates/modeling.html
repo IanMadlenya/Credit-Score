@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Analyze data{% endblock %}
+
+
+{% block page_content %}  
+
+
+   <div class="container">
+    <table>
+    <tr>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+        <td><a href="{{url_for('main.selectmodel')}}" class="btn btn-default">Select Model</a></td>
+        <td><a href="{{url_for('main.createmodel')}}" class="btn btn-default">Create New Model</a></td>
+            </div>
+          </div>
+        </div>
+
+    </tr>
+    </table>
+   </div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Create New Model{% endblock %}
+
+
+{% block page_content %}  
+
+
+
+
+
+   {% if accuracy %}
+            {% block script %}
+                {{ css_resources|indent(4)|safe }}
+                {{ js_resources|indent(4)|safe }}
+                {{ plot_script|indent(4)|safe }}
+              {% endblock %}
+   <div class="container">
+   <p>Accuracy:{{ accuracy }} </p>
+   </div>
+   
+   <div class="container">
+      {{ plot_div|indent(4)|safe }}
+  </div>
+  {% endif %}
+{% endblock %}
